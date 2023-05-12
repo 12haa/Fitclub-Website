@@ -1,0 +1,35 @@
+.Footer-container {
+  background: hsl(230, 4%, 32%);
+
+  position: relative;
+  border: 3px solid transparent;
+}
+
+.Footer-container > hr {
+  border: 0.5px solid var(--lightgray);
+  color: hsl(230, 4%, 32%);
+}
+.footer {
+  padding-left: 40%;
+  
+
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  justify-content: center;
+  height: 20rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 4rem;
+}
+.social-links > img {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
+.logo-f {
+  width: 10rem;
+  margin-left: -50px;
+}
