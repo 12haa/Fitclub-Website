@@ -46,7 +46,7 @@
   justify-content: flex-start;
 }
 .the-best-ad > span {
-  z-index: 2;
+  z-index: 4;
 }
 .the-best-ad > div {
   position: absolute;
@@ -180,4 +180,10 @@
   position: relative;
   flex-direction: column;
   color: rgba(255, 255, 255, 0.658);
+}
+
+.blur-hero {
+  width: 22rem;
+  height: 30rem;
+  left: -20rem;
 }

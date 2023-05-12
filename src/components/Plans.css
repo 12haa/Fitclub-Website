@@ -13,6 +13,7 @@
   align-items: center;
   justify-content: center;
   gap: 3rem;
+  z-index: 9999;
 }
 
 .plan {
@@ -69,4 +70,12 @@
 }
 .plans > :nth-child(2) > button {
   color: orange;
+}
+
+.plans-blur-1 {
+  width: 32rem;
+  height: 23rem;
+  top: 6rem;
+  left: 25rem;
+  z-index: 1;
 }
