@@ -7,9 +7,11 @@ import Calories from "../assets/calories.png";
 import { motion } from "framer-motion";
 
 const Hero = () => {
-  const transition = { type: "spring", duration: 4 };
+  const transition = { type: "spring", duration: 3 };
+  //  Calculating Screen Width
+  const mobile = window.innerWidth <= 768 ? true : false;
   return (
-    <div className="hero">
+    <div className="hero" id="home">
       <div className="blur blur-hero"></div>
 
       <div className="left-h">
@@ -17,7 +19,7 @@ const Hero = () => {
         {/* Ad Section */}
         <div className="the-best-ad">
           <motion.div
-            initial={{ left: "238px" }}
+            initial={{ left: mobile ? "178px" : "238px" }}
             whileInView={{ left: "8px" }}
             transition={{ ...transition, type: "tween" }}
           ></motion.div>
@@ -64,21 +66,26 @@ const Hero = () => {
       <div className="right-h">
         <button className="btn-join">Join Now</button>
         <motion.div
-          initial={{ right: "-10rem" }}
-          whileInView={{ right: " 10rem" }}
-          transition={transition}
+          initial={{ left: "238px" }}
+          whileInView={{ left: "8px" }}
+          transition={{ ...transition, type: "tween" }}
         >
           <div className="heart-rate">
             <img src={Heart} alt="" />
-            <span>
-              Heart Rate<span>116 BPM</span>
-            </span>
+            <span>Heart Rate</span>
+            <span>116 BPM</span>
           </div>
         </motion.div>
 
         {/* Hero Section */}
         <img src={hero_image} alt="" className="hero-image" />
-        <img src={hero_image_back} alt="" className="hero-image-back" />
+        <motion.div
+          initial={{ right: "11rem" }}
+          whileInView={{ right: " 20rem" }}
+          transition={{ ...transition, type: "tween" }}
+        >
+          <img src={hero_image_back} alt="" className="hero-image-back" />
+        </motion.div>
         {/* Calories Section */}
         <div className="calories">
           <img src={Calories} alt="" className="calories-image" />

@@ -4,7 +4,7 @@ import { plansData } from "../data/plansData";
 import whiteTick from "../assets/whiteTick.png";
 const Plans = () => {
   return (
-    <div className="plans-container">
+    <div className="plans-container" id="plans">
       <div className="blur plans-blur-1"></div>
       <div className="blur plans-blur-2"></div>
       <div className="programs-header" style={{ gap: "2rem" }}>
@@ -13,7 +13,7 @@ const Plans = () => {
         <span className="stroke-text"> NOW WITH US</span>
       </div>
       {/* Plans Card */}
-      <div className="plans">
+      <div className="plans" id="plans">
         {plansData.map((plan, index) => (
           <div className="plan" key={index}>
             {plan.icon}
